@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { label 'belajar-jenkins' }
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
