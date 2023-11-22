@@ -14,7 +14,7 @@ RUN composer install \
 
 RUN cp .env.example .env
 RUN php artisan key:generate
-RUN php artisan migrate
+#RUN php artisan migrate
 RUN chmod -R 777 storage
 RUN a2enmod rewrite
 RUN service apache2 restart
