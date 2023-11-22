@@ -21,7 +21,6 @@ pipeline {
         }
         steps {
             sh "docker login --username ${DOCKER_USERNAME} --password ${DOCKER_PASSWORD}"
-            sh "docker tag ${IMAGE_TAG} ${IMAGE_NAME}"
             sh "docker push ${IMAGE_NAME}"
         }
     }
